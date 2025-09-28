@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>بودا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="birthday-audio" src="song.mp3" loop controls style="display:none"></audio>
+    
+    <div class="birthday-container">
+        <h1>عيد ميلاد سعيد يا <span class="friend-name">عبود</span></h1>
+        <p class="greeting-message">
+            كل عام وأنت بألف خير يا غالي<br>
+            ان شاءالله تكون سنة خير عليك <br>
+            وتكون اكبر مهندس حاسوب في العالم<br>
+            وربنا يحققلك كل اللي بتتمناه<br>
+        </p>
+        <div class="images-gallery">
+            <img src="img/abood1.jpg" alt="صورة عبود 1">
+            <img src="img/abood2.jpg" alt="صورة عبود 2">
+            <img src="img/abood3.jpg" alt="صورة عبود 3">
+            <img src="img/abood4.jpg" alt="صورة عبود 4">
+            <img src="img/abood5.jpg" alt="صورة عبود 5">
+        </div>
+        <div class="footer">
+            <span>من صاحبك واخوك المهندس ايهم 💙</span>
+        </div>
+    </div>
+
+    <script>
+    // تشغيل الموسيقى عند أول ضغطة في أي مكان
+    document.addEventListener('click', function playAudioOnce() {
+        var audio = document.getElementById('birthday-audio');
+        if (audio.paused) {
+            audio.play();
+        }
+        // إزالة الحدث بعد أول تشغيل
+        document.removeEventListener('click', playAudioOnce);
+    });
+    </script>
+</body>
+</html>
+
+
